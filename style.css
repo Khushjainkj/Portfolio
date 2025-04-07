@@ -116,3 +116,39 @@ footer{
     color: #fff;
     font-size: 0.9rem;
 }
+
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .header-text{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .header-img{
+        width: 150px;
+        margin-top: 20px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav li{
+        margin: 5px 0;
+    }
+
+    section{
+        padding: 20px;
+    }
+
+    h1, h2, h3, p{
+        word-wrap: break-word;
+    }
+}
