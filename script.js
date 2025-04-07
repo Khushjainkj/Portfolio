@@ -36,10 +36,40 @@ darkStyle.textContent = `
   body.dark .skills li {
     background: #333;
   }
+  body.dark .work-experience .card {
+    background: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+  }
   body.dark .projects .card {
     background: #1e1e1e;
     box-shadow: 0 2px 8px rgba(255,255,255,0.05);
   }
 `
 document.head.appendChild(darkStyle);
+
+// particles
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+particlesJS("particles-js",{
+  particles:{
+    number: { value: 80, density: { enable: true, value_area: 800}},
+    color: {value: isDark ? "#ffffff" : "#000000"},
+    shape: {type: "circle"},
+    opacity: {value: 0.5},
+    size: {value: 3},
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: isDark ? "#ffffff" : "#000000",
+      opacity: 0.4,
+      width: 1,
+    },
+    move: { enable: true, speed: 3},
+  },
+  interactivity:{
+    events:{onhover: {enable: true, mode: "repulse"}},
+    modes:{repulse: {distance: 100}},
+  },
+  retina_detect: true,
+});
 
